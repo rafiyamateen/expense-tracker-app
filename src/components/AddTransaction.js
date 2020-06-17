@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react';
 import { TrackerContext } from '../context/TrackerState';
 
 export const AddTransaction = () => {
-    const [text, setText] = useState('');
+    const [title, setTitle] = useState('');
     const [amount, setAmount] = useState();
     let [idValue, setIdValue] = useState(1);
     const { addTransaction } = useContext(TrackerContext);
@@ -23,7 +23,7 @@ export const AddTransaction = () => {
         else {
             const newTransaction = {
                 id: idValue,
-                text,
+                title,
                 amount: +amount
             };
             if (e.target.className === 'exp-btn') {
@@ -31,6 +31,8 @@ export const AddTransaction = () => {
             }
             setIdValue(++idValue);
             addTransaction(newTransaction);
+            setTitle('');
+            setAmount('');
         }
     };
     return (
@@ -39,11 +41,11 @@ export const AddTransaction = () => {
             <form>
                 <div>
                     <label htmlFor='title'>Title</label><br />
-                    <input type='text' id='title' placeholder='Enter title...' onChange={(e) => setText(e.target.value)} />
+                    <input type='text' id='title' value={title} placeholder='Enter title...' onChange={(e) => setTitle(e.target.value)} />
                 </div>
                 <div>
                     <label htmlFor='amount'>Amount</label><br />
-                    <input type='number' id='amount' placeholder='Enter Amount...' onChange={(e) => setAmount(e.target.value)} />
+                    <input type='number' id='amount' value={amount} placeholder='Enter Amount...' onChange={(e) => setAmount(e.target.value)} />
                 </div>
                 <div className='btns'>
                     <button className='inc-btn' onClick={submit}>Add income</button>
