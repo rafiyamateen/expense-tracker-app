@@ -1,38 +1,128 @@
-.App {
-  text-align: center;
+*{
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 650px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#root{
+  padding: 0px 10px 10px 10px;
+  box-shadow: 1px 1px 10px gray;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.balance h1,.balance h3{
+margin: 0;  
+}
+.section{
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 350px;
+}
+.header{
+  text-align: center;
+  color: rgb(19, 31, 141);
+}
+.inc-exp{
+  display: flex;
+  box-shadow: 2px 2px 6px gray;
+}
+.inc-exp h3{
+  margin: 15px 0px 5px 0px;
+}
+.inc-exp div{
+  flex: 1;
+text-align: center;
+}
+.inc-div{
+border-right: 2px rgb(202, 197, 197) solid;
+}
+.income{
+  color: rgb(9, 60, 168);
+  margin: -5px 0px 15px 0px !important;
+}
+.expense{
+  color: rgb(228, 44, 44);
+  margin-top: -5px !important;
+}
+ul{
+  padding: 0;
+}
+li{
+  list-style-type: none;
+  padding:5px 5px 5px 10px;
+  margin-bottom: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 18px;
+  border: 1px rgb(219, 211, 211) solid;
+  box-shadow: 2px 2px 4px rgb(189, 185, 185);
+}
+.negative{
+  border-right: 4px rgb(228, 44, 44) solid;
+}
+.positive{
+  border-right: 4px rgb(9, 60, 168) solid;
+}
+.title{
+  flex:2;
+}
+.history h2{
+  display: inline-block;
+  margin-bottom: 2px;
+  margin-right: 5px;
+}
+.history p{
+  font-size: 17px;
+  display: inline-block;
+  margin-bottom: 2px;
+}
+.add-transaction h2{
+  margin:10px 0 0 0;
+}
+.add-transaction div{
+  margin-top: 10px;
+}
+input{
+  width: 100%;
+  padding: 7px;
+  border: 1px gray solid;
+  border-radius: 5px;
+}
+label{
+  font-weight: bold;
+  font-size: 18px;
+}
+.btns{
+  display: flex;
+}
+.btns button{
+  flex:1;
+  padding: 7px;
   color: white;
+  border: 1px transparent solid;
+  border-radius: 5px;
 }
-
-.App-link {
-  color: #61dafb;
+.inc-btn{
+  background-color: rgb(9, 60, 168);
+  opacity: 0.8;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.exp-btn{
+  background-color: rgb(228, 44, 44);
+  opacity: 0.8;
+}
+button:hover{
+  opacity: 1;
+  cursor: pointer;
+}
+.del{
+  margin-left: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+i:hover{
+  cursor: pointer;
 }
