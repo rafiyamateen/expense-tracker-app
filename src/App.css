@@ -84,11 +84,12 @@ li{
 }
 .his-btn{
   display: inline-block;
-  width: 13px;
-  height: 13px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   margin-bottom: 2px;
   margin-right: 2px;
+  margin-left: -4px;
   background-color: rgb(113, 26, 148);
   box-shadow: 1.5px 1.5px 4px black;
   border: none;
