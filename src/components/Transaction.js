@@ -8,9 +8,9 @@ export const Transaction = (props) => {
         <li className={sign === '+' ? 'positive' : 'negative'}>
             <span className='title'>{props.transaction.text}</span>
             <span className='list-amount'>{sign}Rs. {Math.abs(props.transaction.amount)}</span>
-            <a className='del' onClick={() => delTransaction(props.transaction.id)}>
+            <button className='del' onClick={() => delTransaction(props.transaction.id)}>
                 <i className="fas fa-trash-alt"></i>
-            </a>
+            </button>
         </li>
     )
 }

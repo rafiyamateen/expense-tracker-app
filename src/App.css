@@ -118,7 +118,12 @@ button:hover{
   opacity: 1;
   cursor: pointer;
 }
+button:focus{
+  outline: 0;
+}
 .del{
+  border: 0;
+  background-color: transparent;
   margin-left: 10px;
   font-size: 18px;
   font-weight: bold;
