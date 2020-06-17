@@ -5,13 +5,15 @@ import { Transaction } from './Transaction';
 export const HistoryList = () => {
     const { transactions } = useContext(TrackerContext);
     const historyDisplay = () => {
-        if (document.getElementsByTagName('ul')[0].style.display === '') {
-            document.getElementsByTagName('ul')[0].style.display = 'none';
+        if (document.getElementsByTagName('li').length !== 0) {
+            if (document.getElementsByTagName('ul')[0].style.display === '') {
+                document.getElementsByTagName('ul')[0].style.display = 'none';
+            }
+            else {
+                document.getElementsByTagName('ul')[0].style.display = '';
+            }
         }
-        else {
-            document.getElementsByTagName('ul')[0].style.display = '';
-        }
-    }
+    };
     return (
         <div className='history'>
             <button className='his-btn' onClick={historyDisplay}></button>
